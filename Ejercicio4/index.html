@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>Mi PWA — Ejercicio 4</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/carafeliz.png" />
+  <link rel="apple-touch-icon" href="icons/persona5.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="icons/carafeliz.png" alt="Logo" class="brand__logo" />
+      <span class="brand__name">Mi PWA · E4</span>
+    </div>
+    <button class="nav-toggle" id="navToggle"
+            aria-label="Abrir menú" aria-expanded="false" aria-controls="appNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="app-nav" id="appNav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio" class="is-active">Inicio</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#acerca">Acerca</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <section id="inicio" class="card">
+      <h1>App Shell — Ejercicio 4</h1>
+      <p>Ciclo de vida del Service Worker (install / activate / fetch).</p>
+
+
+      <p id="swStatus" class="muted">Comprobando Service Worker…</p>
+
+
+      <button id="btnInstall" class="btn" hidden>📲 Instalar aplicación</button>
+      <p id="installHint" class="muted"></p>
+    </section>
+
+    <section id="recursos" class="grid">
+      <article class="card"><h2>Recurso 1</h2><p>Contenido de ejemplo.</p></article>
+      <article class="card"><h2>Recurso 2</h2><p>Contenido de ejemplo.</p></article>
+      <article class="card"><h2>Recurso 3</h2><p>Contenido de ejemplo.</p></article>
+    </section>
+
+    <section id="acerca" class="card">
+      <h2>Acerca</h2>
+      <p>App Shell instalable + SW con logs de ciclo de vida en consola.</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>© 2025 Mi PWA — Ejercicio 4</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
