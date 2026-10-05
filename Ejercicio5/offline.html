@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>Sin conexión — Mi PWA</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="offline-body">
+  <main class="offline-wrap">
+    <div class="offline-card">
+      <div class="offline-emoji">📡</div>
+      <h1>Modo Sin Conexión</h1>
+      <p>No pudimos contactar con el servidor y este recurso no está en caché.</p>
+      <ul class="offline-tips">
+        <li>Revisa tu conexión Wi-Fi o datos móviles.</li>
+        <li>Vuelve a intentarlo cuando tengas señal.</li>
+        <li>Las secciones ya visitadas siguen disponibles offline.</li>
+      </ul>
+      <button class="btn" onclick="location.reload()">🔄 Reintentar</button>
+      <p class="muted">
+        Estado: <span id="netStatus">—</span>
+      </p>
+    </div>
+  </main>
+  <script>
+    const upd = () => document.getElementById('netStatus').textContent =
+      navigator.onLine ? 'En línea ✔' : 'Sin conexión ✖';
+    upd();
+    window.addEventListener('online', upd);
+    window.addEventListener('offline', upd);
+  </script>
+</body>
+</html>
