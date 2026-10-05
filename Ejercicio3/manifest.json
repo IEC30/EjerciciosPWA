@@ -1,0 +1,16 @@
+{
+  "name": "Mi PWA — Ejercicio 3",
+  "short_name": "PWA E3",
+  "description": "App Shell instalable con ciclo de vida de Service Worker",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "lang": "es",
+  "icons": [
+    { "src": "icons/carafeliz.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/persona5.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
